@@ -3,16 +3,20 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-
+import { MyComponentComponent } from './my-component/my-component.component';
+import { LocalServiceService } from './local-service.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyComponentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [LocalServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
